@@ -3,10 +3,12 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
-
+    
+    -- colorscheme and icons
     use 'navarasu/onedark.nvim'
     use("nvim-tree/nvim-web-devicons")
-
+    
+    -- files
     use {
         'nvim-telescope/telescope.nvim',
         tag = '0.1.1',
@@ -28,8 +30,14 @@ return require('packer').startup(function(use)
 
     use {'lewis6991/gitsigns.nvim' -- tag = 'release' -- To use the latest release (do not use this if you run Neovim nightly or dev builds!)
     }
-    use 'romgrk/barbar.nvim'
-
+    
+    use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
+    use {
+        'tomasky/bookmarks.nvim',
+        -- tag = 'release' -- To use the latest release
+    }
+     
+    
     use {
         'nvim-treesitter/nvim-treesitter',
         run = function()
