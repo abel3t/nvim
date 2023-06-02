@@ -15,3 +15,4 @@ vim.keymap.set('n', '<leader>vh', builtin.help_tags, {})
 vim.keymap.set('n', '<leader>pf', builtin.find_files, {})
 vim.keymap.set('n', '<leader>pr', project_nvim.get_recent_projects, {})
 
+require('telescope').load_extension('projects')
