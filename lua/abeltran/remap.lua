@@ -21,10 +21,10 @@ end)
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
 -- next greatest remap ever : asbjornHaland
-vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
+vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 
-vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
+vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 
 -- This is going to get me cancelled
 vim.keymap.set("i", "<C-c>", "<Esc>")
@@ -56,17 +56,16 @@ vim.keymap.set({ "i", "v", "n", "s" }, "<F5>", "<cmd>:Neotree toggle<cr>", { des
 
 
 -- save file
-vim.keymap.set({ "i", "v", "n", "s" }, "<C-s>", "<cmd>w<cr><esc>", { desc = "Save file" })
-
+vim.keymap.set({ "n", "v" }, "<leader>fs", "<cmd>w<cr><esc>", { desc = "Save file" })
 
 -- better up/down
 vim.keymap.set("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 vim.keymap.set("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 
-vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Go to left window", remap = true })
-vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "Go to lower window", remap = true })
-vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "Go to upper window", remap = true })
-vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Go to right window", remap = true })
+vim.keymap.set("n", "<leader>wh", "<C-w>h", { desc = "Go to left window", remap = true })
+vim.keymap.set("n", "<leader>wj", "<C-w>j", { desc = "Go to lower window", remap = true })
+vim.keymap.set("n", "<leader>wk", "<C-w>k", { desc = "Go to upper window", remap = true })
+vim.keymap.set("n", "<leader>wl", "<C-w>l", { desc = "Go to right window", remap = true })
 
 vim.keymap.set("n", "<C-Up>", "<cmd>resize +2<cr>", { desc = "Increase window height" })
 vim.keymap.set("n", "<C-Down>", "<cmd>resize -2<cr>", { desc = "Decrease window height" })
