@@ -74,6 +74,11 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["Comment.nvim"] = {
+    loaded = true,
+    path = "/Users/tamto/.local/share/nvim/site/pack/packer/start/Comment.nvim",
+    url = "https://github.com/numToStr/Comment.nvim"
+  },
   LuaSnip = {
     loaded = true,
     path = "/Users/tamto/.local/share/nvim/site/pack/packer/start/LuaSnip",
@@ -125,7 +130,7 @@ _G.packer_plugins = {
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
   ["dashboard-nvim"] = {
-    config = { "\27LJ\2\n�\19\0\0\6\0\25\0'6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\23\0005\3\3\0005\4\4\0=\4\5\0034\4\4\0005\5\6\0>\5\1\0045\5\a\0>\5\2\0045\5\b\0>\5\3\4=\4\t\0035\4\n\0=\4\v\0035\4\f\0=\4\r\0034\4\a\0005\5\14\0>\5\1\0045\5\15\0>\5\2\0045\5\16\0>\5\3\0045\5\17\0>\5\4\0045\5\18\0>\5\5\0045\5\19\0>\5\6\4=\4\20\0035\4\21\0=\4\22\3=\3\24\2B\0\2\1K\0\1\0\vconfig\1\0\0\vfooter\1\3\0\0\5\24 🔥--test---🔥 \vcenter\1\0\4\ticon\n  \tdesc-Open Neovim Config                      \rshortcut\fSPC f d\vaction+Telescope dotfiles path=~/.config/nvim\1\0\4\ticon\n  \tdesc-Find  word                              \rshortcut\fSPC f w\vaction\24Telescope live_grep\1\0\4\ticon\n  \tdesc-File Browser                            \rshortcut\fSPC f b\vaction\27Telescope file_browser\1\0\4\ticon\n  \tdesc-Find  File                              \rshortcut\fSPC f f\vaction\25Telescope find_files\1\0\4\ticon\n  \tdesc-Recently opened files                   \rshortcut\fSPC f h\vaction\25DashboardFindHistory\1\0\4\ticon\n  \tdesc-Recently latest session                 \rshortcut\fSPC q l\vaction\16SessionLoad\vheader\1\14\0\0:                                                     :                                                     :                                                     :                                                     �\1  ███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗ �\1  ████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║ �\1  ██╔██╗ ██║█████╗  ██║   ██║██║   ██║██║██╔████╔██║ �\1  ██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║ �\1  ██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║ �\1  ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝ :                                                     :                                                     :                                                     \rpackages\1\0\1\venable\1\rshortcut\1\0\4\vaction\16StartupTime\tdesc\20⚡ Startuptime\bkey\6s\ngroup\22DashboardShortCut\1\0\4\vaction\rTSUpdate\tdesc\19🍄 TS Update\bkey\6t\ngroup\22DashboardShortCut\1\0\4\vaction\15PackerSync\tdesc\23📦 Packer Update\bkey\6p\ngroup\22DashboardShortCut\fproject\1\0\4\ticon\t \nlimit\3\4\nlabel\fProject\vaction\30Telescope find_files cwd=\1\0\1\17disable_move\2\nsetup\14dashboard\frequire\0" },
+    config = { "\27LJ\2\np\0\0\6\0\6\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0006\3\0\0'\5\3\0B\3\2\2=\3\5\2B\0\2\1K\0\1\0\vconfig\1\0\0\31abeltran.configs.dashboard\nsetup\14dashboard\frequire\0" },
     loaded = false,
     needs_bufread = false,
     only_cond = false,
@@ -273,7 +278,7 @@ _G.packer_plugins = {
     url = "https://github.com/tpope/vim-fugitive"
   },
   ["which-key.nvim"] = {
-    config = { "\27LJ\2\n�\a\0\0\5\0001\0;6\0\0\0009\0\1\0+\1\2\0=\1\2\0006\0\0\0009\0\1\0)\1,\1=\1\3\0006\0\4\0'\2\5\0B\0\2\0029\0\6\0005\2\f\0005\3\a\0005\4\b\0=\4\t\0035\4\n\0=\4\v\3=\3\r\0025\3\14\0=\3\15\0024\3\0\0=\3\16\0025\3\17\0=\3\18\0025\3\19\0=\3\20\0025\3\21\0=\3\22\0025\3\23\0005\4\24\0=\4\25\0035\4\26\0=\4\27\3=\3\28\0025\3\30\0005\4\29\0=\4\31\0035\4 \0=\4!\3=\3\"\0025\3#\0=\3$\0025\3%\0=\3&\0025\3(\0005\4'\0=\4)\0035\4*\0=\4+\3=\3,\0025\3-\0004\4\0\0=\4.\0034\4\0\0=\4/\3=\0030\2B\0\2\1K\0\1\0\fdisable\14filetypes\rbuftypes\1\0\0\23triggers_blacklist\6v\1\3\0\0\6j\6k\6i\1\0\0\1\3\0\0\6j\6k\20triggers_nowait\1\b\0\0\6`\6'\ag`\ag'\6\"\n<c-r>\az=\vhidden\1\t\0\0\r<silent>\n<cmd>\n<Cmd>\t<CR>\a^:\a^ \v^call \n^lua \vlayout\nwidth\1\0\2\bmin\3\20\bmax\0032\vheight\1\0\2\nalign\tleft\fspacing\3\3\1\0\2\bmin\3\4\bmax\3\25\vwindow\fpadding\1\5\0\0\3\1\3\2\3\1\3\2\vmargin\1\5\0\0\3\1\3\0\3\1\3\0\1\0\4\rposition\vbottom\vborder\tnone\vzindex\3�\a\rwinblend\3\0\19popup_mappings\1\0\2\16scroll_down\n<c-d>\14scroll_up\n<c-u>\nicons\1\0\3\15breadcrumb\a»\ngroup\6+\14separator\b➜\fmotions\1\0\1\ncount\2\15key_labels\14operators\1\0\1\agc\rComments\fplugins\1\0\3\14show_help\2\19ignore_missing\1\14show_keys\2\fpresets\1\0\a\6g\2\6z\2\bnav\2\fwindows\2\17text_objects\2\fmotions\2\14operators\2\rspelling\1\0\2\16suggestions\3\20\fenabled\2\1\0\2\nmarks\2\14registers\2\nsetup\14which-key\frequire\15timeoutlen\ftimeout\6o\bvim\0" },
+    config = { "\27LJ\2\nD\0\0\2\0\4\0\t6\0\0\0009\0\1\0+\1\2\0=\1\2\0006\0\0\0009\0\1\0)\1,\1=\1\3\0K\0\1\0\15timeoutlen\ftimeout\6o\bvim\0" },
     loaded = true,
     path = "/Users/tamto/.local/share/nvim/site/pack/packer/start/which-key.nvim",
     url = "https://github.com/folke/which-key.nvim"
@@ -286,18 +291,6 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: nvim-autopairs
-time([[Config for nvim-autopairs]], true)
-try_loadstring("\27LJ\2\np\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\2B\0\2\1K\0\1\0\21disable_filetype\1\0\0\1\2\0\0\20TelescopePrompt\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")
-time([[Config for nvim-autopairs]], false)
--- Config for: toggleterm.nvim
-time([[Config for toggleterm.nvim]], true)
-try_loadstring("\27LJ\2\n8\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\15toggleterm\frequire\0", "config", "toggleterm.nvim")
-time([[Config for toggleterm.nvim]], false)
--- Config for: project.nvim
-time([[Config for project.nvim]], true)
-try_loadstring("\27LJ\2\n�\2\0\0\6\0\15\0\0216\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\0025\3\6\0=\3\a\0024\3\0\0=\3\b\0024\3\0\0=\3\t\0026\3\n\0009\3\v\0039\3\f\3'\5\r\0B\3\2\2=\3\14\2B\0\2\1K\0\1\0\rdatapath\tdata\fstdpath\afn\bvim\17exclude_dirs\15ignore_lsp\rpatterns\1\b\0\0\t.git\v_darcs\b.hg\t.bzr\t.svn\rMakefile\17package.json\22detection_methods\1\3\0\0\blsp\fpattern\1\0\4\16manual_mode\1\16scope_chdir\vglobal\17silent_chdir\2\16show_hidden\1\nsetup\17project_nvim\frequire\0", "config", "project.nvim")
-time([[Config for project.nvim]], false)
 -- Config for: orgmode
 time([[Config for orgmode]], true)
 try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\forgmode\frequire\0", "config", "orgmode")
@@ -306,10 +299,22 @@ time([[Config for orgmode]], false)
 time([[Config for trouble.nvim]], true)
 try_loadstring("\27LJ\2\nC\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\nicons\1\nsetup\ftrouble\frequire\0", "config", "trouble.nvim")
 time([[Config for trouble.nvim]], false)
+-- Config for: nvim-autopairs
+time([[Config for nvim-autopairs]], true)
+try_loadstring("\27LJ\2\np\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\2B\0\2\1K\0\1\0\21disable_filetype\1\0\0\1\2\0\0\20TelescopePrompt\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")
+time([[Config for nvim-autopairs]], false)
 -- Config for: which-key.nvim
 time([[Config for which-key.nvim]], true)
-try_loadstring("\27LJ\2\n�\a\0\0\5\0001\0;6\0\0\0009\0\1\0+\1\2\0=\1\2\0006\0\0\0009\0\1\0)\1,\1=\1\3\0006\0\4\0'\2\5\0B\0\2\0029\0\6\0005\2\f\0005\3\a\0005\4\b\0=\4\t\0035\4\n\0=\4\v\3=\3\r\0025\3\14\0=\3\15\0024\3\0\0=\3\16\0025\3\17\0=\3\18\0025\3\19\0=\3\20\0025\3\21\0=\3\22\0025\3\23\0005\4\24\0=\4\25\0035\4\26\0=\4\27\3=\3\28\0025\3\30\0005\4\29\0=\4\31\0035\4 \0=\4!\3=\3\"\0025\3#\0=\3$\0025\3%\0=\3&\0025\3(\0005\4'\0=\4)\0035\4*\0=\4+\3=\3,\0025\3-\0004\4\0\0=\4.\0034\4\0\0=\4/\3=\0030\2B\0\2\1K\0\1\0\fdisable\14filetypes\rbuftypes\1\0\0\23triggers_blacklist\6v\1\3\0\0\6j\6k\6i\1\0\0\1\3\0\0\6j\6k\20triggers_nowait\1\b\0\0\6`\6'\ag`\ag'\6\"\n<c-r>\az=\vhidden\1\t\0\0\r<silent>\n<cmd>\n<Cmd>\t<CR>\a^:\a^ \v^call \n^lua \vlayout\nwidth\1\0\2\bmin\3\20\bmax\0032\vheight\1\0\2\nalign\tleft\fspacing\3\3\1\0\2\bmin\3\4\bmax\3\25\vwindow\fpadding\1\5\0\0\3\1\3\2\3\1\3\2\vmargin\1\5\0\0\3\1\3\0\3\1\3\0\1\0\4\rposition\vbottom\vborder\tnone\vzindex\3�\a\rwinblend\3\0\19popup_mappings\1\0\2\16scroll_down\n<c-d>\14scroll_up\n<c-u>\nicons\1\0\3\15breadcrumb\a»\ngroup\6+\14separator\b➜\fmotions\1\0\1\ncount\2\15key_labels\14operators\1\0\1\agc\rComments\fplugins\1\0\3\14show_help\2\19ignore_missing\1\14show_keys\2\fpresets\1\0\a\6g\2\6z\2\bnav\2\fwindows\2\17text_objects\2\fmotions\2\14operators\2\rspelling\1\0\2\16suggestions\3\20\fenabled\2\1\0\2\nmarks\2\14registers\2\nsetup\14which-key\frequire\15timeoutlen\ftimeout\6o\bvim\0", "config", "which-key.nvim")
+try_loadstring("\27LJ\2\nD\0\0\2\0\4\0\t6\0\0\0009\0\1\0+\1\2\0=\1\2\0006\0\0\0009\0\1\0)\1,\1=\1\3\0K\0\1\0\15timeoutlen\ftimeout\6o\bvim\0", "config", "which-key.nvim")
 time([[Config for which-key.nvim]], false)
+-- Config for: toggleterm.nvim
+time([[Config for toggleterm.nvim]], true)
+try_loadstring("\27LJ\2\n8\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\15toggleterm\frequire\0", "config", "toggleterm.nvim")
+time([[Config for toggleterm.nvim]], false)
+-- Config for: project.nvim
+time([[Config for project.nvim]], true)
+try_loadstring("\27LJ\2\n�\2\0\0\6\0\15\0\0216\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\0025\3\6\0=\3\a\0024\3\0\0=\3\b\0024\3\0\0=\3\t\0026\3\n\0009\3\v\0039\3\f\3'\5\r\0B\3\2\2=\3\14\2B\0\2\1K\0\1\0\rdatapath\tdata\fstdpath\afn\bvim\17exclude_dirs\15ignore_lsp\rpatterns\1\b\0\0\t.git\v_darcs\b.hg\t.bzr\t.svn\rMakefile\17package.json\22detection_methods\1\3\0\0\blsp\fpattern\1\0\4\16manual_mode\1\16scope_chdir\vglobal\17silent_chdir\2\16show_hidden\1\nsetup\17project_nvim\frequire\0", "config", "project.nvim")
+time([[Config for project.nvim]], false)
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Event lazy-loads
