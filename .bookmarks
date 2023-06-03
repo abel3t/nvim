@@ -1,1 +1,1 @@
-{"data":{"\/Users\/tamto\/.config\/nvim\/init.lua":{"1":{"m":"require('abeltran.packer')"},"5":{"m":"vim.cmd [[colorscheme onedark]]"}}}}
+{"data":{"\/Users\/tamto\/.config\/nvim\/init.lua":{"5":{"m":"vim.cmd [[colorscheme onedark]]"},"1":{"m":"require('abeltran.packer')"}}}}
