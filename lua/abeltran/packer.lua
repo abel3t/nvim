@@ -33,7 +33,7 @@ return require('packer').startup(function(use)
     
     use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
     use {
-        'tomasky/bookmarks.nvim',
+        'abel3t/bookmarks.nvim',
         -- tag = 'release' -- To use the latest release
     }
      

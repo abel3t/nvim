@@ -2,6 +2,8 @@ require('telescope').load_extension('projects')
 
 local project_nvim = require("project_nvim")
 
+require('telescope').load_extension('bookmarks')
+
 local builtin = require('telescope.builtin')
 -- vim.keymap.set('n', '<leader>pf', builtin.find_files, {})
 vim.keymap.set('n', '<C-p>', builtin.git_files, {})

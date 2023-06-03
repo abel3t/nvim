@@ -21,6 +21,21 @@ require("neo-tree").setup({
   },
   filesystem = {
     find_by_full_path_words = true,
+    filtered_items = {
+      hide_dotfiles = false,
+      hide_gitignored = false,
+      hide_by_name = {
+        "node_modules",
+        ".git",
+        ".vscode",
+        ".idea",
+        "build",
+        "dist",
+        ".next",
+        ".astro",
+        ".bookmarks"
+      },
+    } 
   },
 })
 
