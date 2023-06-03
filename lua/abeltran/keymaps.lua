@@ -52,7 +52,9 @@ map({ "n", "i", "v" }, "<D-v>", '<ESC>"*p');
 
 -- neo-tree
 map({ "i", "v", "n", "s" }, "<F5>", "<cmd>:Neotree toggle<cr>", { desc = "Neotree toggle" })
-
+map("n", "<leader>nf", "<cmd>:Neotree toggle<cr>")
+map("n", "<leader>nb", "<cmd>:Neotree toggle show buffers<cr>")
+map("n", "<leader>ng", "<cmd>:Neotree toggle show git_status<cr>")
 
 -- save file
 map({ "n", "v" }, "<leader>fs", "<cmd>w<cr><esc>", { desc = "Save file" })
