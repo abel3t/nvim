@@ -15,6 +15,12 @@ return require('packer').startup(function(use)
         -- or                            , branch = '0.1.x',
         requires = {{'nvim-lua/plenary.nvim'}}
     }
+    
+    use { "mfussenegger/nvim-dap" }
+    use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
+    use { "folke/neodev.nvim" }
+    use { "mxsdev/nvim-dap-vscode-js", requires = {"mfussenegger/nvim-dap"} }
+
 
     use({
         "folke/trouble.nvim",
