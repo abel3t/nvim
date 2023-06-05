@@ -72,7 +72,7 @@ map("v", "<A-k>", ":m '<-2<cr>gv=gv", { desc = "Move up" })
 
 
 -- toggle term
-map({ "i", "v", "n", "s" }, "<F10>", "<cmd>:ToggleTerm<cr>", { desc = "ToggleTerm", silent = true })
+-- map({ "i", "v", "n", "s" }, "<leader>tt", "<cmd>:ToggleTerm<cr>", { desc = "ToggleTerm", silent = true })
 
 
 local opts = { noremap = true, silent = true }
