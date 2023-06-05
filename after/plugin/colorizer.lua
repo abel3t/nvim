@@ -2,6 +2,7 @@ require 'colorizer'.setup({
   'css',
   'javascript',
   'html',
+  'typescript'
 }, {
   RGB      = true,         -- #RGB hex codes
 	RRGGBB   = true,         -- #RRGGBB hex codes

@@ -24,15 +24,6 @@ end
 
 vim.api.nvim_set_keymap("n", "tg", "<cmd>lua _lazygit_toggle()<CR>", { noremap = true, silent = true })
 
-vim.cmd([[
-autocmd TermEnter term://*toggleterm#*
-      \ tnoremap <silent>tt <Cmd>exe v:count1 . "ToggleTerm"<CR>
-]])
-
-vim.cmd([[
-nnoremap <silent>tt <Cmd>exe v:count1 . "ToggleTerm"<CR>
-]])
-
-vim.cmd([[
-inoremap <silent>tt <Esc><Cmd>exe v:count1 . "ToggleTerm"<CR>
-]])
+vim.api.nvim_set_keymap("t", "<C-`>", "<Cmd>exe v:count1 .. 'ToggleTerm'<CR>", { silent = true })
+vim.api.nvim_set_keymap("n", "<C-`>", "<Cmd>exe v:count1 .. 'ToggleTerm'<CR>", { silent = true })
+vim.api.nvim_set_keymap("i", "<C-`>", "<Esc><Cmd>exe v:count1 .. 'ToggleTerm'<CR>", { silent = true })
