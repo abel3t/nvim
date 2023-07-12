@@ -71,33 +71,6 @@ return {
     },
     { 'mg979/vim-visual-multi', branch = 'master' },
     {
-      "jay-babu/mason-nvim-dap.nvim",
-      opts = {
-        handlers = {
-          python = function(source_name)
-            local dap = require "dap"
-            dap.adapters.python = {
-              type = "executable",
-              command = "/usr/bin/python3",
-              args = {
-                "-m",
-                "debugpy.adapter",
-              },
-            }
-
-            dap.configurations.python = {
-              {
-                type = "python",
-                request = "launch",
-                name = "Launch file",
-                program = "${file}", -- This configuration will launch the current file if used.
-              },
-            }
-          end,
-        },
-      },
-    },
-    {
       "lukas-reineke/indent-blankline.nvim",
       enable = true,
       config = function()
@@ -282,6 +255,88 @@ return {
           org_default_notes_file = '$HOME/org/refile.org',
         })
       end
+    },
+    {
+      'mxsdev/nvim-dap-vscode-js',
+      lazy = false,
+      enable = true,
+      config = function()
+        require("dap-vscode-js").setup({
+        -- node_path = "node", -- Path of node executable. Defaults to $NODE_PATH, and then "node"
+        debugger_path = "/home/tamto/.config/nvim/lua/user/vscode-js-debug", -- Path to vscode-js-debug installation.
+        -- debugger_cmd = { "js-debug-adapter" }, -- Command to use to launch the debug server. Takes precedence over `node_path` and `debugger_path`.
+        adapters = { 'pwa-node', 'pwa-chrome', 'pwa-msedge', 'node-terminal', 'pwa-extensionHost' }, -- which adapters to register in nvim-dap
+        -- log_file_path = "(stdpath cache)/dap_vscode_js.log" -- Path for file logging
+        -- log_file_level = false -- Logging level for output to file. Set to false to disable file logging.
+        -- log_console_level = vim.log.levels.ERROR -- Logging level for output to console. Set to false to disable console output.
+        })
+
+        for _, language in ipairs({ "typescript", "javascript" }) do
+          require("dap").configurations[language] = {
+            {
+              type = "pwa-node",
+              request = "launch",
+              name = "Launch file",
+              program = "${file}",
+              cwd = "${workspaceFolder}",
+            },
+            {
+              type = "pwa-node",
+              request = "attach",
+              name = "Attach",
+              processId = require'dap.utils'.pick_process,
+              cwd = "${workspaceFolder}",
+            },
+            {
+              type = "pwa-node",
+              request = "launch",
+              name = "PGMS Portal Debug",
+              args = { "${workspaceFolder}/apps/portal-service/src/main.ts" },
+              runtimeArgs = {
+                "--nolazy",
+                "-r",
+                "ts-node/register",
+                "-r",
+                "tsconfig-paths/register"
+              },
+              sourceMaps = true,
+              envFile = "${workspaceFolder}/.env",
+              cwd = "${workspaceFolder}",
+              console = "integratedTerminal",
+              protocol = "inspector",
+              resolveSourceMapLocations = {
+                "${workspaceFolder}/**",
+                "!**/node_modules/**"
+              }
+            }
+          }
+        end
+      end
     }
+    -- {
+    --   'mfussenegger/nvim-dap',
+    --   lazy = false,
+    --   enable = true,
+    --   config = function()
+    --     local dap = require "dap"
+    --
+    --     dap.adapters['pwa-node'] = {
+    --       type = 'executable',
+    --       command = 'node',
+    --       args = {"/home/tamto/.config/nvim/lua/user/vscode-js-debug/src/dapDebugServer.ts"},
+    --     }
+    --
+    --     dap.configurations.javascript = {
+    --       {
+    --         name = "Launch file ne",
+    --         type = "pwa-node",
+    --         request = "launch",
+    --         program = "${workspaceFolder}/${file}",
+    --         cwd = "${workspaceFolder}",
+    --         skipFiles = { "<node_internals>/**" }
+    --       },
+    --     }
+    --   end
+    -- }
   }
 }
