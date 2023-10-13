@@ -1,5 +1,7 @@
 local map = vim.keymap.set
 
+vim.opt.guifont = { "Cascadia Code", ":h14" }
+
 -- better up/down
 map("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 map("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
@@ -77,11 +79,16 @@ return {
         vim.opt.list = true
         vim.opt.listchars:append "space:⋅"
         vim.opt.listchars:append "eol:↴"
-        require("indent_blankline").setup {
-          space_char_blankline = " ",
-          show_current_context = true,
-          show_current_context_start = true,
-        }
+
+
+        require("ibl").setup {
+          indent = { highlight = highlight, char = "" },
+          whitespace = {
+              highlight = highlight,
+              remove_blankline_trail = false,
+          },
+          scope = { enabled = false },
+       }
       end
     },
     {
